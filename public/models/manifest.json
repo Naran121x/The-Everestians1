@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "branch": "feature/3d-assets-expansion",
+  "branch": "main",
   "note": "Local files are hosted under /models. Remote NASA URLs are source/download candidates and must pass CORS and runtime viewer tests before being treated as integrated.",
   "models": [
     {
