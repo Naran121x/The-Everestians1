@@ -68,7 +68,7 @@ Historical note: Distinguish Opportunity's landing location from its final resti
 6. Lazy-load only the selected exhibit model and provide an image fallback.
 7. Preserve the existing exhibit data v3. Put approved model-path changes in a new versioned file.
 
-**Validation status:** NASA source pages and model links have been checked. The three additional models have not been downloaded into this repository or runtime-tested. Do not describe them as integrated or browser-verified yet.
+**Validation status:** The Apollo Lunar Module and Opportunity GLBs are the only binaries listed above as locally staged. The InSight, Ingenuity, Perseverance and Viking entries are source/download candidates; their local binary presence and browser rendering must be checked in the repository and viewer before claiming integration.
 
 
 ## Additional abandoned-equipment model located in this expansion
@@ -94,3 +94,10 @@ Historical note: Distinguish Opportunity's landing location from its final resti
 - Apollo ALSEP instruments and retroreflector: no verified official NASA GLB download located. A small procedural scale model may be appropriate, but must be labelled as a reconstruction.
 - Surveyor lander: no verified official NASA GLB download located in this search.
 - A NASA Moon globe/terrain GLB exists for scene context, but it is planetary terrain, not abandoned equipment. It is optional and should not be loaded by default on an 8 GB RAM laptop.
+
+
+## Abandoned-equipment-first audit
+
+See [ABANDONED_EQUIPMENT_ASSET_AUDIT.md](ABANDONED_EQUIPMENT_ASSET_AUDIT.md) and [abandoned-equipment-manifest.json](../public/models/abandoned-equipment-manifest.json).
+
+The audit distinguishes actual abandoned hardware from full-vehicle references and from NASA image-only/3D-stereo evidence. Important result: NASA has 3D measurement imagery of Apollo ALSEP equipment, but the cited page does not provide a downloadable 3D mesh. The third-party ALSEP models found during research are paid, so they were not added. The ALSEP, retroreflector, LRV and Mars landing-debris entries are therefore documented as model gaps rather than falsely represented as included GLBs.
