@@ -3,7 +3,7 @@ name: Stage NASA 3D models
 on:
   push:
     branches:
-      - feature/3d-model-assets
+      - feature/3d-assets-expansion
     paths:
       - ".github/workflows/stage-nasa-models.yml"
       - "scripts/download-nasa-models.mjs"
@@ -20,7 +20,7 @@ jobs:
       - name: Check out model branch
         uses: actions/checkout@v4
         with:
-          ref: feature/3d-model-assets
+          ref: feature/3d-assets-expansion
           fetch-depth: 0
 
       - name: Set up Node.js
@@ -35,10 +35,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/models/insight-cruise-lander-arm-deployed.glb public/models/ingenuity-mars-helicopter.glb public/models/perseverance-mars-2020.glb
+          git add public/models/insight-cruise-lander-arm-deployed.glb public/models/ingenuity-mars-helicopter.glb public/models/perseverance-mars-2020.glb public/models/viking-lander.glb
           if git diff --cached --quiet; then
             echo "No new model files to commit."
           else
-            git commit -m "Add official NASA InSight, Ingenuity and Perseverance GLBs"
-            git push origin HEAD:feature/3d-model-assets
+            git commit -m "Add official NASA Mars lander and rover GLBs"
+            git push origin HEAD:feature/3d-assets-expansion
           fi
