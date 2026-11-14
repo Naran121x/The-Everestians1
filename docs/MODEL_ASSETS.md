@@ -69,3 +69,28 @@ Historical note: Distinguish Opportunity's landing location from its final resti
 7. Preserve the existing exhibit data v3. Put approved model-path changes in a new versioned file.
 
 **Validation status:** NASA source pages and model links have been checked. The three additional models have not been downloaded into this repository or runtime-tested. Do not describe them as integrated or browser-verified yet.
+
+
+## Additional abandoned-equipment model located in this expansion
+
+### Viking Lander (Viking 1 / Viking 2 design)
+- NASA page: https://science.nasa.gov/3d-resources/viking-lander/
+- Credit: NASA/Michael D. Carbajal
+- Official GLB URL: https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/viking-lander/Viking%20Lander.glb
+- GitHub raw fallback: https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/Viking%20Lander/Viking%20Lander.glb
+- Published size: 1.76 MB.
+- NASA explains that Viking 1 and Viking 2 used identical lander designs but landed at different sites: Chryse Planitia and Utopia Planitia.
+- Status: official GLB source located; repository download and runtime test pending.
+
+### Spirit and Opportunity twin-rover model
+- NASA page: https://science.nasa.gov/resource/mars-exploration-rovers-3d-model/
+- Credit: NASA Visualization Technology Applications and Development (VTAD)
+- NASA lists a combined 11.36 MB glTF model of Spirit and Opportunity.
+- Status: official combined-model page confirmed; direct file URL/dependencies not yet resolved. The smaller Opportunity-specific GLB remains the currently staged asset.
+
+## Moon assets still requiring a dedicated model
+
+- Lunar Roving Vehicle (LRV): no verified official NASA GLB download located in this search. Keep it on the research list; use a clearly labelled schematic/procedural model only if no source asset can be verified.
+- Apollo ALSEP instruments and retroreflector: no verified official NASA GLB download located. A small procedural scale model may be appropriate, but must be labelled as a reconstruction.
+- Surveyor lander: no verified official NASA GLB download located in this search.
+- A NASA Moon globe/terrain GLB exists for scene context, but it is planetary terrain, not abandoned equipment. It is optional and should not be loaded by default on an 8 GB RAM laptop.
