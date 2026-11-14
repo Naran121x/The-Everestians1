@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "status": "structurally-parsed-runtime-test-pending",
+  "models": [
+    {
+      "id": "apollo-lunar-module",
+      "name": "Apollo Lunar Module",
+      "file": "/models/apollo-lunar-module.glb",
+      "source": "https://github.com/nasa/NASA-3D-Resources/blob/master/3D%20Models/Apollo%20Lunar%20Module/Apollo%20Lunar%20Module.glb",
+      "nasaPage": "https://science.nasa.gov/3d-resources/apollo-lunar-module/",
+      "credit": "NASA / Michael D. Carbajal",
+      "validation": {
+        "magic": "glTF",
+        "version": 2,
+        "declaredLength": 716840,
+        "actualLength": 716840,
+        "jsonChunkLength": 198896,
+        "binChunkLength": 517916,
+        "extensionsRequired": [
+          "KHR_draco_mesh_compression"
+        ],
+        "nodes": 135,
+        "meshes": 134,
+        "materials": 12,
+        "textures": 3,
+        "images": 6
+      },
+      "sourceGitBlob": "74b7b99a60f9903a0592fd763ed14482204e24d9",
+      "notes": "Inspect model hierarchy before representing Apollo 11's abandoned descent stage; the ascent stage departed the Moon."
+    },
+    {
+      "id": "opportunity-mer-b",
+      "name": "Opportunity Mars Exploration Rover (MER-B)",
+      "file": "/models/opportunity-mer-b.glb",
+      "source": "https://github.com/nasa/NASA-3D-Resources/blob/master/3D%20Models/Mars%20Exploration%20Rover%20-%20Opportunity%20(MER-B)/Mars%20Exploration%20Rover%20-%20Opportunity%20(MER-B).glb",
+      "credit": "NASA",
+      "validation": {
+        "magic": "glTF",
+        "version": 2,
+        "declaredLength": 36668,
+        "actualLength": 36668,
+        "jsonChunkLength": 8172,
+        "binChunkLength": 28468,
+        "extensionsRequired": [
+          "KHR_draco_mesh_compression"
+        ],
+        "nodes": 1,
+        "meshes": 1,
+        "materials": 9
+      },
+      "sourceGitBlob": "4e154ed38a6d4bf128ecb52f7231baed716c4f55",
+      "notes": "Do not confuse the landing coordinates with the final resting location."
+    }
+  ],
+  "disclaimer": "GLB container and JSON structure were parsed from the source bytes. Browser rendering, Draco decoding in the app, visual inspection, scale validation, and performance testing have not yet been completed."
+}
