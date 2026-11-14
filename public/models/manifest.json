@@ -1,7 +1,7 @@
 {
   "version": 3,
   "branch": "main",
-  "note": "Local files are hosted under /models. Remote NASA URLs are source/download candidates and must pass CORS and runtime viewer tests before being treated as integrated.",
+  "note": "Local model files are hosted under /models. File presence is confirmed in the main branch; browser rendering, model orientation, Draco decoding and performance still require testing in the actual viewer.",
   "models": [
     {
       "id": "apollo-lunar-module",
@@ -73,8 +73,9 @@
       "rawGithubUrl": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/InSight%20Cruise%20Lander/InSight%20Cruise%20Lander%20%28arm%20deployed%29.glb",
       "credit": "NASA/Brian E. Kumanchik",
       "publishedSizeMB": 3.77,
-      "status": "official-glb-url-found-runtime-test-pending",
-      "notes": "NASA describes this as the landed configuration with solar panels and arm deployed, but before deployment of the seismometer and heat probe. It is a model variant, not a fully equipped final surface configuration."
+      "status": "local-glb-present-runtime-test-pending",
+      "notes": "NASA describes this as the landed configuration with solar panels and arm deployed, but before deployment of the seismometer and heat probe. It is a model variant, not a fully equipped final surface configuration.",
+      "file": "/models/insight-cruise-lander-arm-deployed.glb"
     },
     {
       "id": "ingenuity-mars-helicopter",
@@ -86,8 +87,9 @@
       "rawGithubUrl": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/Ingenuity%20Mars%20Helicopter/Ingenuity%20Mars%20Helicopter.glb",
       "credit": "NASA/Brian E. Kumanchik",
       "publishedSizeMB": 1.93,
-      "status": "official-glb-url-found-runtime-test-pending",
-      "notes": "Retired Mars helicopter; keep this exhibit distinct from active rover missions."
+      "status": "local-glb-present-runtime-test-pending",
+      "notes": "Retired Mars helicopter; keep this exhibit distinct from active rover missions.",
+      "file": "/models/ingenuity-mars-helicopter.glb"
     },
     {
       "id": "perseverance-mars-2020",
@@ -99,8 +101,9 @@
       "rawGithubUrl": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/Mars%202020%20Perseverance%20Rover/Mars%202020%20Perseverance%20Rover.glb",
       "credit": "NASA/Jet Propulsion Laboratory",
       "publishedSizeMB": 4.76,
-      "status": "official-glb-url-found-reference-only-not-abandoned",
-      "notes": "Perseverance is an active mission asset, not abandoned equipment. Keep it as a comparison/reference model only; do not present it as abandoned or as a core exhibit."
+      "status": "local-glb-present-reference-only-runtime-test-pending",
+      "notes": "Perseverance is an active mission asset, not abandoned equipment. Keep it as a comparison/reference model only; do not present it as abandoned or as a core exhibit.",
+      "file": "/models/perseverance-mars-2020.glb"
     },
     {
       "id": "viking-lander",
@@ -114,7 +117,7 @@
       "rawGithubUrl": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/Viking%20Lander/Viking%20Lander.glb",
       "credit": "NASA/Michael D. Carbajal",
       "publishedSizeMB": 1.76,
-      "status": "official-glb-url-found-download-runtime-test-pending",
+      "status": "local-glb-present-runtime-test-pending",
       "notes": "NASA describes the Viking 1 and 2 landers as identical spacecraft. This model represents the lander design; label the two separate landing sites accurately."
     },
     {
