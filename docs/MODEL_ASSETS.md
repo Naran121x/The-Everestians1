@@ -68,7 +68,7 @@ Historical note: Distinguish Opportunity's landing location from its final resti
 6. Lazy-load only the selected exhibit model and provide an image fallback.
 7. Preserve the existing exhibit data v3. Put approved model-path changes in a new versioned file.
 
-**Validation status:** The Apollo Lunar Module and Opportunity GLBs are the only binaries listed above as locally staged. The InSight, Ingenuity, Perseverance and Viking entries are source/download candidates; their local binary presence and browser rendering must be checked in the repository and viewer before claiming integration.
+**Repository status (main):** The Apollo Lunar Module, Opportunity, InSight Cruise Lander, Ingenuity, Perseverance and Viking GLB file paths are present in public/models/. The manifest now records their local paths. Browser rendering, orientation, material appearance, Draco decoding and performance are still unverified; do not call them viewer-integrated until tested in the actual app.
 
 
 ## Additional abandoned-equipment model located in this expansion
@@ -80,7 +80,7 @@ Historical note: Distinguish Opportunity's landing location from its final resti
 - GitHub raw fallback: https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/Viking%20Lander/Viking%20Lander.glb
 - Published size: 1.76 MB.
 - NASA explains that Viking 1 and Viking 2 used identical lander designs but landed at different sites: Chryse Planitia and Utopia Planitia.
-- Status: official GLB source located; repository download and runtime test pending.
+- Status: local GLB file is present in public/models/viking-lander.glb; runtime viewer test pending.
 
 ### Spirit and Opportunity twin-rover model
 - NASA page: https://science.nasa.gov/resource/mars-exploration-rovers-3d-model/
@@ -101,3 +101,16 @@ Historical note: Distinguish Opportunity's landing location from its final resti
 See [ABANDONED_EQUIPMENT_ASSET_AUDIT.md](ABANDONED_EQUIPMENT_ASSET_AUDIT.md) and [abandoned-equipment-manifest.json](../public/models/abandoned-equipment-manifest.json).
 
 The audit distinguishes actual abandoned hardware from full-vehicle references and from NASA image-only/3D-stereo evidence. Important result: NASA has 3D measurement imagery of Apollo ALSEP equipment, but the cited page does not provide a downloadable 3D mesh. The third-party ALSEP models found during research are paid, so they were not added. The ALSEP, retroreflector, LRV and Mars landing-debris entries are therefore documented as model gaps rather than falsely represented as included GLBs.
+
+
+## Main-branch availability
+
+The following GLB files are present in public/models/ on main:
+- apollo-lunar-module.glb
+- opportunity-mer-b.glb
+- insight-cruise-lander-arm-deployed.glb
+- ingenuity-mars-helicopter.glb
+- perseverance-mars-2020.glb (reference only; active mission)
+- viking-lander.glb
+
+Presence in GitHub does not equal successful rendering. The actual web viewer still needs to load each model and check its orientation, scale, textures, Draco extension and mobile performance.
