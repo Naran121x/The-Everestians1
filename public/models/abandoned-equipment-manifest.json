@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Prioritize actual abandoned surface equipment. This inventory distinguishes real 3D meshes from image-only evidence and illustrative reconstructions.",
+  "rules": [
+    "Do not label an active mission vehicle as abandoned.",
+    "A complete lander/rover/helicopter model is valid when that machine itself was left on the surface.",
+    "Do not call an image, stereo anaglyph, terrain STL, or NASA visualization a standalone equipment mesh.",
+    "Clearly label procedural or artist-made geometry as an illustrative reconstruction, not a NASA scan."
+  ],
+  "moon": [
+    {
+      "id": "apollo-lunar-module-descent-stage",
+      "name": "Apollo Lunar Module descent stage",
+      "abandoned": true,
+      "modelStatus": "component-within-whole-vehicle-model",
+      "modelPath": "/models/apollo-lunar-module.glb",
+      "modelSource": "https://science.nasa.gov/3d-resources/apollo-lunar-module/",
+      "note": "The ascent stage departed; the descent stage remained. Inspect node/mesh hierarchy and isolate the descent-stage geometry before presenting this as a dedicated artifact.",
+      "evidence": "https://svs.gsfc.nasa.gov/4767"
+    },
+    {
+      "id": "apollo-alsep-easep",
+      "name": "Apollo ALSEP / EASEP instruments",
+      "abandoned": true,
+      "modelStatus": "no-verified-free-official-standalone-mesh-found",
+      "modelSource": "https://science.nasa.gov/photojournal/precise-3-d-measurements-of-objects-at-apollo-14-landing-site/",
+      "note": "NASA's page documents 3D reconstructions from LROC stereo imagery, but its downloadable files are images rather than a 3D mesh."
+    },
+    {
+      "id": "lunar-laser-ranging-retroreflector",
+      "name": "Lunar Laser Ranging Retroreflector",
+      "abandoned": true,
+      "modelStatus": "no-verified-free-official-standalone-mesh-found",
+      "modelSource": "https://science.nasa.gov/photojournal/precise-3-d-measurements-of-objects-at-apollo-14-landing-site/",
+      "note": "Use an explicitly labelled illustrative reconstruction if a suitable free model cannot be verified."
+    },
+    {
+      "id": "apollo-lunar-roving-vehicle",
+      "name": "Apollo Lunar Roving Vehicle",
+      "abandoned": true,
+      "modelStatus": "no-verified-free-official-nasa-mesh-found-in-this-audit",
+      "note": "Do not substitute a commercial asset or a different rover without checking its provenance."
+    },
+    {
+      "id": "apollo-surface-tools-and-plss",
+      "name": "Apollo surface tools, PLSS backpacks and S-band antenna",
+      "abandoned": true,
+      "modelStatus": "no-verified-free-official-standalone-mesh-found",
+      "evidence": "https://svs.gsfc.nasa.gov/4767"
+    }
+  ],
+  "mars": [
+    {
+      "id": "viking-lander",
+      "name": "Viking 1 / Viking 2 lander",
+      "abandoned": true,
+      "modelStatus": "official-nasa-glb-source-available",
+      "modelPath": "/models/viking-lander.glb",
+      "modelSource": "https://science.nasa.gov/3d-resources/viking-lander/"
+    },
+    {
+      "id": "insight-lander",
+      "name": "InSight lander",
+      "abandoned": true,
+      "modelStatus": "official-nasa-glb-source-available-variant-incomplete-for-final-configuration",
+      "modelSource": "https://science.nasa.gov/3d-resources/insight-cruise-lander/",
+      "note": "The arm-deployed variant predates seismometer and heat-probe deployment."
+    },
+    {
+      "id": "opportunity-rover",
+      "name": "Opportunity rover",
+      "abandoned": true,
+      "modelStatus": "official-nasa-glb-available",
+      "modelPath": "/models/opportunity-mer-b.glb",
+      "modelSource": "https://science.nasa.gov/3d-resources/mars-exploration-rover-opportunity-mer-b/"
+    },
+    {
+      "id": "spirit-rover",
+      "name": "Spirit rover",
+      "abandoned": true,
+      "modelStatus": "official-combined-spirit-opportunity-gltf-source-found-download-not-verified",
+      "modelSource": "https://science.nasa.gov/resource/mars-exploration-rovers-3d-model/"
+    },
+    {
+      "id": "ingenuity-helicopter",
+      "name": "Ingenuity Mars Helicopter",
+      "abandoned": true,
+      "modelStatus": "official-nasa-glb-source-available",
+      "modelSource": "https://science.nasa.gov/3d-resources/ingenuity-mars-helicopter/"
+    },
+    {
+      "id": "perseverance-edl-debris",
+      "name": "Perseverance entry, descent and landing debris",
+      "abandoned": true,
+      "modelStatus": "official-surface-evidence-images-found-no-standalone-mesh-verified",
+      "evidence": "https://science.nasa.gov/resource/perseverance-and-mars-2020-spacecraft-components-on-the-surface/",
+      "components": [
+        "descent stage",
+        "backshell and parachute",
+        "heat shield"
+      ]
+    },
+    {
+      "id": "curiosity-edl-debris",
+      "name": "Curiosity backshell and parachute",
+      "abandoned": true,
+      "modelStatus": "official-stereo-3d-imagery-found-not-downloadable-mesh",
+      "evidence": "https://science.nasa.gov/resource/parachute-and-back-shell-in-3d/"
+    }
+  ]
+}
