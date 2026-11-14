@@ -25,6 +25,14 @@ const assets = [
     ]
   },
   {
+    name: "Viking Lander",
+    output: "public/models/viking-lander.glb",
+    urls: [
+      "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/viking-lander/Viking%20Lander.glb",
+      "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/Viking%20Lander/Viking%20Lander.glb"
+    ]
+  },
+  {
     name: "Mars 2020 Perseverance Rover",
     output: "public/models/perseverance-mars-2020.glb",
     urls: [
