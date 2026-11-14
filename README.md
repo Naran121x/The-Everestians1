@@ -12,3 +12,5 @@ The manifest also records NASA's InSight, Ingenuity, and Perseverance model sour
 ## Expanded asset research
 
 See [docs/MODEL_ASSETS.md](docs/MODEL_ASSETS.md) for the Viking Lander model source and the remaining candidates (Spirit/Opportunity combined model, Lunar Roving Vehicle, ALSEP, and Surveyor). Not every NASA historical object has an official downloadable GLB.
+
+##
