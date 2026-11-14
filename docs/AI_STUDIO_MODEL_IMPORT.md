@@ -1,6 +1,6 @@
 # AI Studio implementation handoff — NASA 3D models
 
-Read the GitHub branch `feature/3d-assets-expansion`, especially:
+Read the repository's `main` branch, especially:
 - `public/models/manifest.json`
 - `docs/MODEL_ASSETS.md`
 - `docs/PROJECT_INTEGRATION.md`
