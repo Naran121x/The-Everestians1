@@ -1,56 +1,114 @@
 {
-  "version": 1,
-  "status": "structurally-parsed-runtime-test-pending",
+  "version": 2,
+  "branch": "feature/3d-model-assets",
+  "note": "Local files are hosted under /models. Remote NASA URLs are source/download candidates and must pass CORS and runtime viewer tests before being treated as integrated.",
   "models": [
     {
       "id": "apollo-lunar-module",
       "name": "Apollo Lunar Module",
+      "planet": "Moon",
       "file": "/models/apollo-lunar-module.glb",
-      "source": "https://github.com/nasa/NASA-3D-Resources/blob/master/3D%20Models/Apollo%20Lunar%20Module/Apollo%20Lunar%20Module.glb",
       "nasaPage": "https://science.nasa.gov/3d-resources/apollo-lunar-module/",
+      "source": "https://github.com/nasa/NASA-3D-Resources/blob/master/3D%20Models/Apollo%20Lunar%20Module/Apollo%20Lunar%20Module.glb",
       "credit": "NASA / Michael D. Carbajal",
+      "status": "local-glb-structurally-parsed-runtime-test-pending",
+      "sourceGitBlob": "74b7b99a60f9903a0592fd763ed14482204e24d9",
       "validation": {
-        "magic": "glTF",
+        "container": "glTF binary",
         "version": 2,
-        "declaredLength": 716840,
-        "actualLength": 716840,
-        "jsonChunkLength": 198896,
-        "binChunkLength": 517916,
-        "extensionsRequired": [
-          "KHR_draco_mesh_compression"
-        ],
+        "bytes": 716840,
         "nodes": 135,
         "meshes": 134,
         "materials": 12,
         "textures": 3,
-        "images": 6
+        "images": 6,
+        "extensionsRequired": [
+          "KHR_draco_mesh_compression"
+        ]
       },
-      "sourceGitBlob": "74b7b99a60f9903a0592fd763ed14482204e24d9",
-      "notes": "Inspect model hierarchy before representing Apollo 11's abandoned descent stage; the ascent stage departed the Moon."
+      "notes": "Inspect mesh hierarchy before representing Apollo 11's abandoned descent stage; the ascent stage departed the Moon."
     },
     {
       "id": "opportunity-mer-b",
       "name": "Opportunity Mars Exploration Rover (MER-B)",
+      "planet": "Mars",
       "file": "/models/opportunity-mer-b.glb",
+      "nasaPage": "https://science.nasa.gov/3d-resources/mars-exploration-rovers/",
       "source": "https://github.com/nasa/NASA-3D-Resources/blob/master/3D%20Models/Mars%20Exploration%20Rover%20-%20Opportunity%20(MER-B)/Mars%20Exploration%20Rover%20-%20Opportunity%20(MER-B).glb",
       "credit": "NASA",
+      "status": "local-glb-structurally-parsed-runtime-test-pending",
+      "sourceGitBlob": "4e154ed38a6d4bf128ecb52f7231baed716c4f55",
       "validation": {
-        "magic": "glTF",
+        "container": "glTF binary",
         "version": 2,
-        "declaredLength": 36668,
-        "actualLength": 36668,
-        "jsonChunkLength": 8172,
-        "binChunkLength": 28468,
-        "extensionsRequired": [
-          "KHR_draco_mesh_compression"
-        ],
+        "bytes": 36668,
         "nodes": 1,
         "meshes": 1,
-        "materials": 9
+        "materials": 9,
+        "extensionsRequired": [
+          "KHR_draco_mesh_compression"
+        ]
       },
-      "sourceGitBlob": "4e154ed38a6d4bf128ecb52f7231baed716c4f55",
-      "notes": "Do not confuse the landing coordinates with the final resting location."
+      "notes": "Keep Opportunity's landing site distinct from its final resting location."
+    },
+    {
+      "id": "insight-lander-original",
+      "name": "InSight Lander (original NASA resource)",
+      "planet": "Mars",
+      "format": "glTF download",
+      "nasaPage": "https://science.nasa.gov/resource/insight-lander-3d-model/",
+      "nasaEmbedUrl": "https://mars.nasa.gov/gltf_embed/24880",
+      "credit": "NASA/JPL-Caltech",
+      "publishedDownloadSizeMB": 21.32,
+      "status": "official-page-and-embed-found-direct-download-url-not-resolved",
+      "notes": "This is the exact page supplied by the team. NASA lists a 21.32 MB glTF download. The page's direct binary URL has not yet been extracted, so do not set it as the viewer URL."
+    },
+    {
+      "id": "insight-cruise-lander-arm-deployed",
+      "name": "InSight Cruise Lander — landed configuration, arm deployed",
+      "planet": "Mars",
+      "format": "GLB",
+      "nasaPage": "https://science.nasa.gov/3d-resources/insight-cruise-lander/",
+      "remoteUrl": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/insight-cruise-lander/InSight%20Cruise%20Lander%20%28arm%20deployed%29.glb",
+      "rawGithubUrl": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/InSight%20Cruise%20Lander/InSight%20Cruise%20Lander%20%28arm%20deployed%29.glb",
+      "credit": "NASA/Brian E. Kumanchik",
+      "publishedSizeMB": 3.77,
+      "status": "official-glb-url-found-runtime-test-pending",
+      "notes": "NASA describes this as the landed configuration with solar panels and arm deployed, but before deployment of the seismometer and heat probe. It is a model variant, not a fully equipped final surface configuration."
+    },
+    {
+      "id": "ingenuity-mars-helicopter",
+      "name": "Ingenuity Mars Helicopter",
+      "planet": "Mars",
+      "format": "GLB",
+      "nasaPage": "https://science.nasa.gov/3d-resources/ingenuity-mars-helicopter/",
+      "remoteUrl": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/ingenuity-mars-helicopter/Ingenuity%20Mars%20Helicopter.glb",
+      "rawGithubUrl": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/Ingenuity%20Mars%20Helicopter/Ingenuity%20Mars%20Helicopter.glb",
+      "credit": "NASA/Brian E. Kumanchik",
+      "publishedSizeMB": 1.93,
+      "status": "official-glb-url-found-runtime-test-pending",
+      "notes": "Retired Mars helicopter; keep this exhibit distinct from active rover missions."
+    },
+    {
+      "id": "perseverance-mars-2020",
+      "name": "Mars 2020 Perseverance Rover",
+      "planet": "Mars",
+      "format": "GLB",
+      "nasaPage": "https://science.nasa.gov/3d-resources/mars-2020-perseverance-rover/",
+      "remoteUrl": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/mars-2020-perseverance-rover/Mars%202020%20Perseverance%20Rover.glb",
+      "rawGithubUrl": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/Mars%202020%20Perseverance%20Rover/Mars%202020%20Perseverance%20Rover.glb",
+      "credit": "NASA/Jet Propulsion Laboratory",
+      "publishedSizeMB": 4.76,
+      "status": "official-glb-url-found-reference-only-not-abandoned",
+      "notes": "Perseverance is an active mission asset, not abandoned equipment. Keep it as a comparison/reference model only; do not present it as abandoned or as a core exhibit."
     }
   ],
-  "disclaimer": "GLB container and JSON structure were parsed from the source bytes. Browser rendering, Draco decoding in the app, visual inspection, scale validation, and performance testing have not yet been completed."
+  "runtimeRequirements": [
+    "Test NASA CDN CORS before using remoteUrl directly in the browser.",
+    "Prefer downloading/self-hosting approved models under public/models when project tooling permits.",
+    "Use a Draco-capable GLTF loader where the GLB declares KHR_draco_mesh_compression.",
+    "Lazy-load one selected exhibit model at a time and provide image fallback.",
+    "Keep exhibit data v3 unchanged; write approved changes to a new versioned data file.",
+    "Do not mark any model browser-verified until loaded in the actual project viewer."
+  ]
 }
