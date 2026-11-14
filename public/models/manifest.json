@@ -1,6 +1,6 @@
 {
-  "version": 2,
-  "branch": "feature/3d-model-assets",
+  "version": 3,
+  "branch": "feature/3d-assets-expansion",
   "note": "Local files are hosted under /models. Remote NASA URLs are source/download candidates and must pass CORS and runtime viewer tests before being treated as integrated.",
   "models": [
     {
@@ -101,6 +101,33 @@
       "publishedSizeMB": 4.76,
       "status": "official-glb-url-found-reference-only-not-abandoned",
       "notes": "Perseverance is an active mission asset, not abandoned equipment. Keep it as a comparison/reference model only; do not present it as abandoned or as a core exhibit."
+    },
+    {
+      "id": "viking-lander",
+      "name": "Viking Lander (Viking 1 / Viking 2 design)",
+      "planet": "Mars",
+      "format": "GLB",
+      "file": "/models/viking-lander.glb",
+      "nasaPage": "https://science.nasa.gov/3d-resources/viking-lander/",
+      "source": "https://github.com/nasa/NASA-3D-Resources/blob/master/3D%20Models/Viking%20Lander/Viking%20Lander.glb",
+      "remoteUrl": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/viking-lander/Viking%20Lander.glb",
+      "rawGithubUrl": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/Viking%20Lander/Viking%20Lander.glb",
+      "credit": "NASA/Michael D. Carbajal",
+      "publishedSizeMB": 1.76,
+      "status": "official-glb-url-found-download-runtime-test-pending",
+      "notes": "NASA describes the Viking 1 and 2 landers as identical spacecraft. This model represents the lander design; label the two separate landing sites accurately."
+    },
+    {
+      "id": "spirit-mer-a",
+      "name": "Spirit Mars Exploration Rover (MER-A)",
+      "planet": "Mars",
+      "format": "shared MER twin rover model candidate",
+      "nasaPage": "https://science.nasa.gov/resource/mars-exploration-rovers-3d-model/",
+      "source": "NASA's Spirit and Opportunity twin-rover 3D model page",
+      "credit": "NASA Visualization Technology Applications and Development (VTAD)",
+      "publishedDownloadSizeMB": 11.36,
+      "status": "official-combined-gltf-source-found-format-and-direct-url-pending",
+      "notes": "NASA's combined model page explicitly identifies the twin Spirit and Opportunity rovers. The separate Opportunity GLB is already staged; this combined 11.36 MB glTF is a higher-detail alternate candidate and should not be downloaded or converted until its file URL and dependencies are confirmed."
     }
   ],
   "runtimeRequirements": [
