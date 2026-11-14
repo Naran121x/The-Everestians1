@@ -1,35 +1,42 @@
 # AI Studio implementation handoff — NASA 3D models
 
-Read the GitHub branch `feature/3d-model-assets`, especially:
+Read the GitHub branch `feature/3d-assets-expansion`, especially:
 - `public/models/manifest.json`
 - `docs/MODEL_ASSETS.md`
-- `docs/AI_STUDIO_MODEL_IMPORT.md`
+- `docs/PROJECT_INTEGRATION.md`
 
-Before editing, inspect the current application and preserve its design and existing exhibit data v3.
+Use the manifest as the source of truth for NASA model names, sources, credits, and caveats.
 
-## Download the official NASA GLBs
-The repository includes a no-dependency Node script. Run:
+## Download available NASA GLBs
+Run:
 ```bash
 node scripts/download-nasa-models.mjs
 ```
-It downloads the InSight Cruise Lander arm-deployed model, Ingenuity, and Perseverance into `public/models/`, tries NASA's official CDN first and GitHub raw second, and validates the GLB v2 header and byte length. If downloads fail, report the exact error and use the source URLs in the manifest; do not create fake or placeholder GLBs.
+This script attempts to download the InSight Cruise Lander (arm deployed), Ingenuity, Perseverance (comparison-only), and Viking Lander into `public/models/`. It tries NASA's official CDN first and GitHub raw second, and validates the GLB v2 header and declared byte length. Do not claim the downloads succeeded until the script output confirms each file was saved.
 
-## Integrate safely
-1. Use the project's existing GLTF loader. Configure Draco decoding when a file requires `KHR_draco_mesh_compression`.
-2. Lazy-load one selected exhibit model at a time; never preload every model on the landing page.
-3. Add loading and error states, plus a NASA image fallback.
-4. Preserve credits and source links from the manifest.
-5. InSight Cruise Lander model is the landed configuration with solar panels and arm deployed, before SEIS and HP3 deployment; label that caveat.
-6. Ingenuity is a retired mission asset and can be an exhibit candidate.
-7. Perseverance is active; use it only as a comparison/reference, never as abandoned equipment.
-8. The exact older InSight resource page lists a 21.32 MB glTF but its direct file URL is not yet resolved. Do not pretend the embed URL is a raw GLB.
-9. Never overwrite v3. Make approved exhibit changes in a new versioned data file.
+## Model selection rules
+- Apollo Lunar Module: inspect the hierarchy; Apollo 11's ascent stage departed, while its descent stage remained.
+- Opportunity: keep landing site and final resting location distinct.
+- Spirit: NASA has a combined Spirit/Opportunity twin-rover glTF resource (11.36 MB); direct URL/dependencies are not resolved. Do not pretend it is already downloaded. The Opportunity-specific GLB can be used as a clearly labelled twin-design reference if needed.
+- InSight: prefer the official InSight Cruise Lander arm-deployed GLB when the original 21.32 MB glTF direct URL is unresolved. Label it as a pre-SEIS/HP3 deployment configuration.
+- Ingenuity: eligible retired-mission exhibit candidate.
+- Viking: official 1.76 MB GLB source located; script downloads it. Viking 1 and 2 had identical lander designs but different landing sites.
+- Perseverance: active mission; comparison/reference only, never an abandoned-equipment exhibit.
+- Lunar Roving Vehicle, ALSEP/LRRR, and Surveyor: no verified official NASA GLB found in this research pass. Use a labelled procedural/scale reconstruction only if the team decides it materially improves the story.
+
+## Integration requirements
+1. Inspect the actual app before editing; preserve its current design and all exhibit data v3.
+2. Use the existing GLTF loader. Configure Draco decoding if required by a model.
+3. Lazy-load one selected model at a time; do not preload all GLBs on the landing page.
+4. Add loading/error states and a NASA-image fallback.
+5. Show source attribution and link the official NASA resource page.
+6. Make approved data changes in a new versioned file (v3.1 or later); never overwrite v3.
+7. Test scale, orientation, materials, textures, and performance on an integrated-GPU laptop.
+8. Do not claim a model works until it loads in the running app.
 
 ## Deliverables
-- Download results and byte sizes
-- Working 3D viewer integration
+- Per-file download results and byte sizes
+- Working model viewer integration
 - New versioned exhibit-data file
-- Runtime test results, including Draco/CORS errors
-- Keep performance suitable for an 8 GB RAM laptop with integrated graphics
-
-Do not claim success until the models load in the running app.
+- Actual browser test results, including Draco/CORS errors
+- Lightweight performance: load only the selected model and dispose of it when changing exhibits
