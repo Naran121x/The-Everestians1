@@ -52,6 +52,7 @@ function validateGlb(buffer, label) {
 }
 
 await mkdir("public/models", { recursive: true });
+let failed = 0;
 
 for (const asset of assets) {
   let downloaded = null;
@@ -70,6 +71,7 @@ for (const asset of assets) {
   }
   if (!downloaded) {
     console.error("FAILED:", asset.name, lastError?.message ?? "unknown error");
+    failed++;
     continue;
   }
   const output = resolve(asset.output);
@@ -77,4 +79,9 @@ for (const asset of assets) {
   await writeFile(output, new Uint8Array(downloaded.buffer));
   console.log("SAVED:", asset.output, downloaded.validation.bytes, "bytes");
   console.log("SOURCE:", downloaded.source);
+}
+
+if (failed > 0) {
+  console.error(`\n${failed} NASA model download(s) failed. No successful result should be treated as a complete asset set.`);
+  process.exitCode = 1;
 }
